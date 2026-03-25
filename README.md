@@ -29,6 +29,12 @@ If you want to test the applet locally, pick a version your prefer. Copy the bot
 to the `~/.local/share/cinnamon/applets` folder. Rename the copied folder and update all the necessary files, including
 `info.json`, `metadata.json`, `settings-schema.json`. Then, click on the panel, pick applets and enable the applet. After making any changes into the applet's code, don't forget to restart Cinnamon (`Alt+F2` then `r`).
 
+This repository is not a tutorial. If you need more information about how to create Cinnamon applets, I would recommend
+reading these material to get a better grasp on the topic:
+- [Writing an applet on Linux Mint Community Wiki](https://mintguide.miraheze.org/wiki/Development:Writing_an_applet)
+- [Writing a Cinnamon applet by Nick Durante](https://nickdurante.github.io/development/Writing-a-Cinnamon-Applet/)
+- [Cinnamon Applet Development](https://github.com/linuxmint/cinnamon-spices-applets/blob/master/fish%40kriegcc/docs/DEVELOPMENT.md)
+
 
 ## License
 
