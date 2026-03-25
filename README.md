@@ -4,8 +4,8 @@ This repo contains a skeleton for a Cinnamon applet. Cinnamon applets are small 
 display information and perform some actions. If you need to build an applet that displays and updates information on
 the Cinnamon panel, just pick one of the following solutions of your choice.
 
-- class-based
-- prototype-based
+- [class-based](class-based/your-project@username/)
+- [prototype-based](prototype-based/your-project@username/)
 
 
 ## Explanations
