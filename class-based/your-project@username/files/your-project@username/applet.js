@@ -7,15 +7,15 @@ const Settings = imports.ui.settings;
 class YourProjectApplet extends Applet.TextIconApplet {
     static MAX_UPDATES = 5;
 
-    constructor(metadata, orientation, panelHeight, instanceId) {
-        super(orientation, panelHeight, instanceId);
+    constructor(metadata, orientation, panel_height, instance_id) {
+        super(orientation, panel_height, instance_id);
 
         // set an applet running state
         this._applet_running = true;
 
         try {
             // read settings and bind update-interval to a property and a callback on change
-            this.settings = new Settings.AppletSettings(this, metadata.uuid, instanceId);
+            this.settings = new Settings.AppletSettings(this, metadata.uuid, instance_id);
             this.settings.bind("update-interval", "_update_interval", this.on_settings_changed)
 
             // business logic
@@ -110,6 +110,6 @@ class YourProjectApplet extends Applet.TextIconApplet {
     }
 }
 
-function main(metadata, orientation, panelHeight, instanceId) {
-    return new YourProjectApplet(metadata, orientation, panelHeight, instanceId);
+function main(metadata, orientation, panel_height, instance_id) {
+    return new YourProjectApplet(metadata, orientation, panel_height, instance_id);
 }
