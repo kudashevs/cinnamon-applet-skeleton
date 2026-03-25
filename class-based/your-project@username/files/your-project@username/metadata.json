@@ -1,0 +1,8 @@
+{
+  "version": "0.1.0",
+  "uuid": "your-project@username",
+  "name": "Your project",
+  "description": "Your project description",
+  "cinnmon-version": ["5.8", "6.0", "6.2", "6.4", "6.6"],
+  "max-instances": 1
+}
