@@ -11,23 +11,23 @@ the Cinnamon panel, just pick one of the following solutions of your choice.
 ## Explanations
 
 Because it was relatively hard to find information about how the mainloop and visual update are working with Cinnamon
-applets, I created this repository. The repository contains an example of a `counter` app. The key feature of the app is
-that at some point it stops its execution and clear the `timeout id` in a "correct" way. Unlike most of the other examples, the `timeout id` is always an `integer` and never a `null` value. This decision avoids unnecessary null checks.
+applets, I created this repository. The repository contains an example of a `counter` applet. Its key feature is that
+at some point it stops the execution and clear the `timeout id` in a "correct" way. Unlike most of the other examples,
+the `timeout id` is always an `integer` and never a `null` value. This decision avoids unnecessary null checks. The
+counter can be restarted by clicking on it or by changing its settings.
 
-The example uses the classic `mainloop` approach. Some modern applets are based on the `Util.setInverval` approach,
-which is more concise but less controllerd. So, I found it interesting to share my experience with the mainloop.
+This example uses the classic `Mainloop.timeout_add` approach. Some modern applets are based on the `Util.setInverval` approach, which is more concise but less controllable. So, I found it interesting to share my experience with the `mainloop`.
 
 
 ## How to use it
 
-If you want to develop an applet on top of this skeleton, pick a version you prefer. Copy the top level folder `your-project@username` to a new localtion. Rename both `your-project@username` and update all the necessary files,
-including `info.json`, `screenshot.png`, `metadata.json`, `settings-schema.json`. Don't forget to rename the
-`YourProjectApplet` class or function, depending on the selected option.
+If you want to develop an applet on top of this skeleton, pick a version you prefer. Copy the top level folder `your-project@username` to a new localtion. Rename both `your-project@username` folder and update all the necessary
+files, including `info.json`, `screenshot.png`, `metadata.json`, `settings-schema.json`. Don't forget to rename the
+`YourProjectApplet` class or function, depending on your choice.
 
-If you want to test an applet locally, pick a version your prefer. Copy the bottom level folder `your-project@username`
-to the `~/.local/share/cinnamon/applets` folder. Rename the `your-project@username` folder and update all the necessary
-files, including `info.json`, `metadata.json`, `settings-schema.json`. Then, click on the panel, pick applets and enable
-the applet. After making changes in the code, don't forget to restart Cinnamon (`Alt+F2` then `r`).
+If you want to test the applet locally, pick a version your prefer. Copy the bottom level folder `your-project@username`
+to the `~/.local/share/cinnamon/applets` folder. Rename the copied folder and update all the necessary files, including
+`info.json`, `metadata.json`, `settings-schema.json`. Then, click on the panel, pick applets and enable the applet. After making any changes into the applet's code, don't forget to restart Cinnamon (`Alt+F2` then `r`).
 
 
 ## License
