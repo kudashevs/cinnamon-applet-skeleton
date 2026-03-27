@@ -37,6 +37,11 @@ YourProjectApplet.prototype = {
     },
 
     _set_update_interval: function () {
+        // if timeout already exists clear it
+        if (this._timeout_id > 0) {
+            this._clear_timeout();
+        }
+
         const update_interval = parseInt(this._update_interval);
         // read min and max update interval value from settings
         const min_update_interval = this.settings.settingsData['update-interval'].min;
@@ -49,11 +54,6 @@ YourProjectApplet.prototype = {
         ) {
             this._applet_running = false;
             return;
-        }
-
-        // if timeout already exists clear it
-        if (this._timeout_id > 0) {
-            this._clear_timeout();
         }
 
         // the mainloop sets a repetition timeout and Lang.bind binds this to a callback function
